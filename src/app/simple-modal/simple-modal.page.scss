@@ -1,0 +1,64 @@
+ion-accordion{
+  top: 40px;
+
+  border-radius: 25px;
+  background: #88B0DB;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 300px;
+}
+
+ion-list{
+  background: #88B0DB;
+}
+
+.ion-item-space-bw {
+  margin-top: -12px;
+}
+
+.ion-item-space-bw-2 {
+  margin-top: -20px;
+}
+
+p{
+  font-size: 15px;
+}
+
+.accordion-yellow-text{
+  color: #F6FFBD;
+}
+
+.item-color-p{
+  color: #FFFFFF;
+}
+
+ion-item::part(native){
+  background-color: #88B0DB;
+}
+
+.center-accordion{
+  display: grid;
+  justify-content: center;
+  color:red($color: #000000);
+}
+
+.top-accordion{
+  top: 60px;
+}
+
+
+ion-item{
+  border-radius: 25px;
+}
+
+ion-padding{
+  border-radius: 25px;
+    background: #88B0DB;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+}
+
+accordion-collapsed{
+  background-color: black;
+}

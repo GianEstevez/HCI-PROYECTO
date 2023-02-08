@@ -22,6 +22,19 @@
   margin: 0;
 }
 
+ion-content{
+  --background: none !important;
+    background-size: cover;
+}
+
+ion-menu{
+  width: 270px !important;
+}
+
+ion-menu::part(container){
+  width: 270px;
+}
+
 ion-menu-button{
   margin: 0;
   width: 48px;
@@ -73,6 +86,7 @@ ion-menu-button{
   display: flex;
   justify-content: right;
   padding-right: 10px;
+  margin-bottom: 40px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -114,12 +128,15 @@ ion-menu-button::part(icon){
   color:black;
 }
 
-
+.botonbottom2{
+  margin-bottom: 10px;
+}
 
 
 .asd{
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -140,9 +157,7 @@ ion-menu-button::part(icon){
   --background: #fff url("../../assets/bg.jpeg") no-repeat center center / cover;
 }
 
-.ion-content-bg-sd{
-  background: red;
-}
+
 
 ion-menu-button{
   background: #ffffff;

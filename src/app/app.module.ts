@@ -14,3 +14,43 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+// Servicio
+
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+
+  private data: any;
+
+  constructor() { this.data = 'definido como A' }
+
+  getData() {
+    return this.data;
+  }
+
+  setData(data: string) {
+    this.data = data;
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class BackgroundService {
+
+  private data: any;
+
+  constructor() { this.data = "'./assets/bg.jpeg'" }
+
+  getData() {
+    return this.data;
+  }
+
+  setData(data: string) {
+    this.data = data;
+  }
+}

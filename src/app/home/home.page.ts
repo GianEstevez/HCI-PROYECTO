@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilterModalPage } from '../filter-modal/filter-modal.page';
 import { DataService, BackgroundService } from '../app.module';
+import { EventEmitterService } from '../app.module';
 
 @Component({
   selector: 'app-home',
@@ -20,21 +21,52 @@ export class HomePage implements OnInit {
   //];
   
 
-  public bgImage = './assets/bg.jpeg';
+  
   public aColor: string = "#ccc";
 
   // cambiarFondoFilterParadas(){
   //   this.bgImage = './assets/fondo2.jpeg';
   // }
 
+  contador = 2;
+
+  
   cambiarFondoFilterParadas(){
-    this.bgImage = this.backgroundService.getData();
+
+    if (this.contador % 2 == 0){
+      this.backgroundService.setData("'./assets/fondo2.jpeg'");
+      this.bgImage = this.backgroundService.getData();
+      console.log(this.bgImage);
+      this.contador = this.contador + 1;
+    }else {
+      this.backgroundService.setData("'./assets/bg.jpeg'");
+      this.bgImage = this.backgroundService.getData();
+      console.log(this.bgImage);
+      this.contador = this.contador + 1;
+    }
+
+    
   }
+
+  //public bgImage = this.backgroundService.getData();
+  public bgImage = "'./assets/bg.jpeg'";
+  data = "'./assets/bg.jpeg'";
 
   constructor(private modalCtrl: ModalController,
     private route: Router,
     private dataService: DataService,
-    private backgroundService: BackgroundService) {}
+    private backgroundService: BackgroundService,
+    private eventEmitterService: EventEmitterService) {
+      
+      //this.bgImage = this.backgroundService.getData();
+
+      this.eventEmitterService.changeEmitted$.subscribe(
+        change => {
+          this.bgImage = change;
+        }
+      );
+
+    }
 
   ngOnInit(): void {
       //this.presentModal();

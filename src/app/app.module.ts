@@ -17,7 +17,7 @@ export class AppModule {}
 
 // Servicio
 
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -53,4 +53,22 @@ export class BackgroundService {
   setData(data: string) {
     this.data = data;
   }
+}
+
+
+// EMITER
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EventEmitterService {
+
+  private emitChangeSource = new EventEmitter<any>();
+
+  changeEmitted$ = this.emitChangeSource.asObservable();
+
+  emitChange(change: any) {
+    this.emitChangeSource.emit(change);
+  }
+
 }

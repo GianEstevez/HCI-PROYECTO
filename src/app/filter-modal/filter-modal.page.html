@@ -4,9 +4,22 @@
 <ion-content>
 
   <div class="center-accordion">
-    <ion-button (click)="cambiarFondoOriginal()"> HSUSH </ion-button>
     <ion-button (click)="cambiarFondoSinParadas()"> Cambiar FONDO </ion-button>
+    <ion-button (click)="updateData()"> EMMITER </ion-button>
   </div>
+
+  
+
+    <ion-toggle [(ngModel)]="toggleValue" (ionChange)="changeValueParadas()"></ion-toggle>
+    <!--- <p *ngIf="toggleValue">The toggle is on</p>
+    <p *ngIf="!toggleValue">The toggle is off</p> -->
+
+  <ion-content padding>
+    <ion-toggle [(ngModel)]="toggleValue2" (ionChange)="changeValueRecargas()"></ion-toggle>
+    <!--- <p *ngIf="toggleValue">The toggle is on</p>
+    <p *ngIf="!toggleValue">The toggle is off</p> -->
+  </ion-content>
+  
 
   <ion-list>
     <ion-item>

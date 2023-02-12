@@ -1,3 +1,7 @@
+:host{
+
+}
+
 ion-accordion{
     top: 40px;
   
@@ -19,10 +23,23 @@ ion-accordion{
   .ion-item-space-bw-2 {
     margin-top: -17px;
   }
+
+  .title-bottom{
+    font-size: 20px !important;
+    margin-bottom: 0px;
+  }
   
   p{
     font-size: 15px;
+    
   }
+
+  ion-title{
+    height: 70px;
+  }
+
+  
+  
   
   .accordion-yellow-text{
     color: #F6FFBD;
@@ -35,12 +52,39 @@ ion-accordion{
   ion-item::part(native){
     background-color: #88B0DB;
   }
+
+  .center-switches{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toggle-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Opcional si quieres que el div ocupe toda la altura disponible */
+  }
+
+  ion-toggle {
+    --background-checked: #235284 !important;
+  }
+
+  ion-modal::part(handle){
+    width: 200px !important;
+  }
+
+  .modal-wrapper {
+    width: 200px;
+    height: 8px;
+  }
   
   .center-accordion{
     display: grid;
     justify-content: center;
     color:red($color: #000000);
-    margin-top: 30px;
+    margin-top: 20px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
   
   .top-accordion{

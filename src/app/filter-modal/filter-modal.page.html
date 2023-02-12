@@ -3,42 +3,33 @@
 
 <ion-content>
 
-  <div class="center-accordion">
+  <!--- <div class="center-accordion">
     <ion-button (click)="cambiarFondoSinParadas()"> Cambiar FONDO </ion-button>
     <ion-button (click)="updateData()"> EMMITER </ion-button>
-  </div>
+  </div> -->
 
   
 
-    <ion-toggle [(ngModel)]="toggleValue" (ionChange)="changeValueParadas()"></ion-toggle>
-    <!--- <p *ngIf="toggleValue">The toggle is on</p>
-    <p *ngIf="!toggleValue">The toggle is off</p> -->
 
-  <ion-content padding>
+  
+  <div class="center-accordion">
+
+    <p class="title-bottom"> <b>Filtrar</b> </p>
+    <p> Aquí podrás visualizar las estaciones más cercanas, al igual que los puntos de recarga en tu zona. Solamente debes seleccionar qué deseas ver. </p>
+
+    <div class="center-switches">
+    <p>Ver paradas</p>
+    <ion-toggle [(ngModel)]="toggleValue" (ionChange)="changeValueParadas()"></ion-toggle>  
+    </div>
+    <div class="center-switches">
+    <p>Ver puntos de recarga</p>
     <ion-toggle [(ngModel)]="toggleValue2" (ionChange)="changeValueRecargas()"></ion-toggle>
-    <!--- <p *ngIf="toggleValue">The toggle is on</p>
-    <p *ngIf="!toggleValue">The toggle is off</p> -->
-  </ion-content>
+    </div>
+    
+
+</div>
   
 
-  <ion-list>
-    <ion-item>
-      <ion-label>Default Toggle</ion-label>
-      <ion-toggle slot="end"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Checked Toggle</ion-label>
-      <ion-toggle slot="end" [checked]="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Disabled Toggle</ion-label>
-      <ion-toggle slot="end" [disabled]="true"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label>Disabled Checked Toggle</ion-label>
-      <ion-toggle slot="end" [checked]="true" [disabled]="true"></ion-toggle>
-    </ion-item>
-  </ion-list>
   
 </ion-content>
   

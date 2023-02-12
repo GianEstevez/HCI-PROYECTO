@@ -30,8 +30,41 @@
   padding-inline-end: 11px !important;
 }
 
-ion-modal{
-  border-radius: 25px;
+//ion-modal{
+//  border-radius: 25px;
+//}
+
+ion-menu.menu-content {
+  --background: rgba(0, 0, 0, 0.5);
+}
+
+app-proyecto{
+  background-color: blue;
+}
+
+.modal-sheet{
+  --height: 550px !important;
+}
+
+.modal-wrapper {
+  width: 200px;
+  height: 8px;
+}
+
+ion-modal::part(handle){
+  top: 14px !important;
+  width: 40px !important;
+}
+
+ion-fab-button::part(native){
+  border-radius: 20px !important;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.ion-bottom-sheet-handle {
+  width: 200px !important;
+  height: 8px;
 }
 
 ion-modal::part(content){

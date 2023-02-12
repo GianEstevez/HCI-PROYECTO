@@ -1,0 +1,34 @@
+
+
+<ion-content>
+
+  <ion-button (click)="home()" ><ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+
+<ion-card>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Edad</ion-label>
+    <ion-input type="number" [(ngModel)]="edad"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="agregarPersona()">Agregar</ion-button>
+</ion-card>
+
+
+
+<ion-card *ngFor="let persona of personas">
+  <ion-card-header>
+    <ion-card-title>{{ persona.nombre }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Edad: {{ persona.edad }}</p>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>
+
+

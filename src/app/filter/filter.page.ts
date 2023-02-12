@@ -9,6 +9,11 @@ import { DataService, BackgroundService } from '../app.module';
 })
 export class FilterPage implements OnInit {
 
+  slideOpts = {
+    slidesPerView: 1,
+    spaceBetween: 10
+  };
+
   data: any;
   data2: any;
 

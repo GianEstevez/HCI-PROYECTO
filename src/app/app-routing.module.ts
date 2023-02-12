@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'filter-modal',
     loadChildren: () => import('./filter-modal/filter-modal.module').then( m => m.FilterModalPageModule)
   },
+  {
+    path: 'trayecto',
+    loadChildren: () => import('./trayecto/trayecto.module').then( m => m.TrayectoPageModule)
+  },
 ];
 
 @NgModule({

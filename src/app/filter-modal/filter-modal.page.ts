@@ -17,6 +17,17 @@ export class FilterModalPage implements OnInit {
   constructor(private backgroundService: BackgroundService,
     private eventEmitterService: EventEmitterService) {
     this.data = this.backgroundService.getData();
+
+    //Para toggle paradas
+    const savedValue = localStorage.getItem('toggleValue');
+    if (savedValue !== null) {
+      this.toggleValue = JSON.parse(savedValue);
+    }
+    //Para toggle recargas
+    const savedValue2 = localStorage.getItem('toggleValue2');
+    if (savedValue2 !== null) {
+      this.toggleValue2 = JSON.parse(savedValue2);
+    }
    }
 
   ngOnInit() {
@@ -87,6 +98,9 @@ export class FilterModalPage implements OnInit {
       console.log('F4-1');
       this.eventEmitterService.emitChange("'./assets/bg.jpeg'");
     }
+
+    localStorage.setItem('toggleValue', JSON.stringify(this.toggleValue));
+
     
   }
 
@@ -151,7 +165,10 @@ export class FilterModalPage implements OnInit {
       console.log('F12 - 1');
       this.controllerParadas = 1;
   
-    } 
+    }
+    
+    localStorage.setItem('toggleValue2', JSON.stringify(this.toggleValue2));
+
     
   }
 

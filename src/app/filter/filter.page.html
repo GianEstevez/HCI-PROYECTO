@@ -10,4 +10,59 @@
 <ion-button (click)="changeData()"> Service</ion-button>
 <ion-button (click)="viewDataFondo()"> Ver data</ion-button>
 <ion-button (click)="changePRUEBA()"> Cambiar fondo</ion-button>
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Deslizamiento de Tarjetas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Tarjeta 1</ion-card-subtitle>
+          <ion-card-title>XD
+
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Esta es la tarjeta 1 con información importante.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Tarjeta 2</ion-card-subtitle>
+          <ion-card-title>Sevani</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Esta es la tarjeta 2 con detalles adicionales.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Tarjeta 3</ion-card-subtitle>
+          <ion-card-title>Gian</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>Esta es la tarjeta 3 con información adicional.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
 </ion-content>

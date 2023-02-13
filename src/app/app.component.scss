@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: dark) {
+    body {
+      filter: invert(1);
+    }
+  }
+
+  ion-content, ion-header, ion-footer {
+    @media (prefers-color-scheme: dark) {
+      filter: invert(0);
+    }
+  }
+
+
+  // Establecer el modo claro en la aplicación
+.light-mode {
+    --ion-color-primary: #333;
+    --ion-color-secondary: #fff;
+    --ion-color-tertiary: #333;
+    --ion-color-success: #fff;
+    --ion-color-warning: #fff;
+    --ion-color-danger: #fff;
+    --ion-color-dark: #333;
+    --ion-color-medium: #333;
+    --ion-color-light: #fff;
+  }

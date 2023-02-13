@@ -30,11 +30,18 @@ export class FilterModalPage implements OnInit {
     }
    }
 
+  imageList = ['./assets/bg-paradas.png','./assets/bg-paradas.png','./assets/bg-recarga.png','./assets/bg-parada-recarga.png'];
+
   ngOnInit() {
+    this.preloadImages(this.imageList);
+    console.log(this.imageList);
   }
 
-  updateData() {
-    this.eventEmitterService.emitChange("'./assets/fondo2.jpeg'");
+  preloadImages(imageList: string[]) {
+    for (let i = 0; i < imageList.length; i++) {
+      const img = new Image();
+      img.src = imageList[i];
+    }
   }
 
   toggleValue: boolean = false;
@@ -47,7 +54,7 @@ export class FilterModalPage implements OnInit {
     // F1
     if (this.toggleValue && !this.toggleValue2 && this.controllerRecargas == 0) {
       // Do something when toggle is on
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
       console.log('F1');
       this.controllerParadas = 1;
     }
@@ -55,7 +62,7 @@ export class FilterModalPage implements OnInit {
     // F1 - 1
     if (this.toggleValue && !this.toggleValue2 && this.controllerRecargas == 1) {
       // Do something when toggle is on
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
       console.log('F1');
       this.controllerParadas = 1;
     }
@@ -65,20 +72,20 @@ export class FilterModalPage implements OnInit {
       // Do something when toggle is off
       console.log('F2');
       this.controllerParadas = 1;
-      this.eventEmitterService.emitChange("'./assets/bg.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg.png'");
     }
 
     // F3
     if (!this.toggleValue && this.toggleValue2 && this.controllerParadas == 1) {
       console.log('F3');
-      this.eventEmitterService.emitChange("'./assets/bg-recarga.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-recarga.png'");
       this.controllerRecargas = 1;
     }
     
     
     // F4
     if (this.toggleValue && this.toggleValue2){
-      this.eventEmitterService.emitChange("'./assets/bg-parada-recarga.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-parada-recarga.png'");
       this.controllerParadas = 1;
       this.controllerRecargas = 1;
        console.log('F4');
@@ -89,14 +96,14 @@ export class FilterModalPage implements OnInit {
       // Do something when toggle is off
       console.log('F4-1');
       this.controllerParadas = 1;
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
     }
 
     // F4 - 1
     if (!this.toggleValue && !this.toggleValue2) {
       // Do something when toggle is off
       console.log('F4-1');
-      this.eventEmitterService.emitChange("'./assets/bg.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg.png'");
     }
 
     localStorage.setItem('toggleValue', JSON.stringify(this.toggleValue));
@@ -108,7 +115,7 @@ export class FilterModalPage implements OnInit {
     // F5 
     if (this.toggleValue2 && !this.toggleValue && this.controllerParadas == 0) {
       // Do something when toggle is on
-      this.eventEmitterService.emitChange("'./assets/bg-recarga.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-recarga.png'");
       console.log('F5');
       this.controllerRecargas = 1;
     } 
@@ -116,7 +123,7 @@ export class FilterModalPage implements OnInit {
      if (!this.toggleValue2 && !this.toggleValue && this.controllerParadas == 0) {
        // Do something when toggle is off
        console.log('F6');
-       this.eventEmitterService.emitChange("'./assets/bg.jpeg'");
+       this.eventEmitterService.emitChange("'./assets/bg.png'");
        
      }
     
@@ -125,18 +132,18 @@ export class FilterModalPage implements OnInit {
       // Do something when toggle is off
       console.log('F7');
       this.controllerRecargas = 1;
-      this.eventEmitterService.emitChange("'./assets/bg.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg.png'");
     }
     //F8
     if (this.toggleValue && this.toggleValue2){
-      this.eventEmitterService.emitChange("'./assets/bg-parada-recarga.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-parada-recarga.png'");
       console.log('F8');
       this.controllerParadas = 1;
       this.controllerRecargas = 1;
     }
     // F9
     if (this.toggleValue && !this.toggleValue2 && this.controllerRecargas == 1){
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
       console.log('F9');
       this.controllerRecargas = 1;
     }
@@ -146,13 +153,13 @@ export class FilterModalPage implements OnInit {
       // Do something when toggle is off
       console.log('F10');
       this.controllerRecargas = 1;
-      this.eventEmitterService.emitChange("'./assets/bg-recarga.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-recarga.png'");
     }
 
     // F12
     if (this.toggleValue && !this.toggleValue2 && this.controllerRecargas == 1) {
       // Do something when toggle is on
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
       console.log('F12');
       this.controllerParadas = 1;
   
@@ -161,7 +168,7 @@ export class FilterModalPage implements OnInit {
     // F12 - 1
     if (this.toggleValue && !this.toggleValue2 && this.controllerParadas == 1) {
       // Do something when toggle is on
-      this.eventEmitterService.emitChange("'./assets/bg-paradas.jpeg'");
+      this.eventEmitterService.emitChange("'./assets/bg-paradas.png'");
       console.log('F12 - 1');
       this.controllerParadas = 1;
   
@@ -178,11 +185,11 @@ export class FilterModalPage implements OnInit {
 
   cambiarFondoSinParadas(){
     if (this.contador % 2 == 0){
-      this.backgroundService.setData("'./assets/fondo2.jpeg'");
+      this.backgroundService.setData("'./assets/bg-paradas.png'");
       console.log(this.backgroundService.getData());
       this.contador = this.contador + 1;
     }else {
-      this.backgroundService.setData("'./assets/bg.jpeg'");
+      this.backgroundService.setData("'./assets/bg.png'");
       console.log(this.backgroundService.getData());
       this.contador = this.contador + 1;
     }

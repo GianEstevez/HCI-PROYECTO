@@ -1,5 +1,5 @@
 
-<ion-content [style.background-image]="'url(' + bgImage + ')' " [fullscreen]="true" scroll-y="false">
+<ion-content [style.background-image]="'url(' + bgImage + ')' " [fullscreen]="true" scroll-y="false" >
 
 
   <ion-menu #menu contentId="main-content">
@@ -30,8 +30,15 @@
 
   </div>
 
+  
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+  
+
+<div class="ayu">
+
+  <!--
+  <ion-fab>
     <ion-fab-button (click)="toggleFab()">
       <ion-icon name="bus-outline"></ion-icon>
     </ion-fab-button>
@@ -47,11 +54,26 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+  -->
 
-<div class="ayu">
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-img src="../../assets/sos.png" width="50" height="50"></ion-img>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="images"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
   
-  <ion-button  (click)="cambiarFondoFilterParadas()" class="botonbottom"> <ion-icon name="bus-outline"></ion-icon>  </ion-button>
+  
 </div>
+
+
 
 
 <div class="asd">

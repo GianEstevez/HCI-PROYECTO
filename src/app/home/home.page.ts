@@ -9,6 +9,9 @@ import { IonMenu } from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@capacitor/splash-screen';
+
 
 @Component({
   selector: 'app-home',
@@ -24,6 +27,8 @@ export class HomePage implements OnInit {
   //backgroundImages = [
   //  './assets/bg.jpeg',
   //];
+
+  statusBarHeight: number = 0;
 
   
   
@@ -54,8 +59,8 @@ export class HomePage implements OnInit {
   }
 
   //public bgImage = this.backgroundService.getData();
-  public bgImage = "'./assets/bg.jpeg'";
-  data = "'./assets/bg.jpeg'";
+  public bgImage = "'./assets/bg.png'";
+  data = "'./assets/bg.png'";
 
   constructor(private modalCtrl: ModalController,
     private route: Router,
@@ -63,10 +68,11 @@ export class HomePage implements OnInit {
     private backgroundService: BackgroundService,
     private eventEmitterService: EventEmitterService,
     private menuController: MenuController,
-    public toastController: ToastController) {
+    public toastController: ToastController,
+    private platform: Platform) {
       
       //this.bgImage = this.backgroundService.getData();
-    
+
 
       this.eventEmitterService.changeEmitted$.subscribe(
         change => {
@@ -75,6 +81,8 @@ export class HomePage implements OnInit {
       );
 
     }
+
+
 
   
     ngAfterViewInit() {
@@ -86,12 +94,28 @@ export class HomePage implements OnInit {
       });
     }
     
+  imgLoaded: Record<number, boolean> = {};
+  imageSrcs = ['./assets/fondo2.jpeg','./assets/bg-paradas.jpeg','./assets/bg-recarga.jpeg','./assets/bg-parada-recarga.png'];
 
   ngOnInit(): void {
       //this.presentModal();
       // this.bgImage = './assets/bg.jpeg'; 
       
   }
+
+  preloadImages() {
+    for (let i = 0; i < this.imageSrcs.length; i++) {
+      const img = new Image();
+      img.onload = () => {
+        this.imgLoaded[i] = true;
+      }
+      img.src = this.imageSrcs[i];
+    }
+  }
+
+
+
+
   async presentModal() {
     const modal = await this.modalCtrl.create({
       component: SimpleModalPage,
@@ -112,8 +136,17 @@ export class HomePage implements OnInit {
   
   fabToggled = false;
 
+  previousFabToggled = false;
+
   toggleFab() {
-    this.fabToggled = !this.fabToggled;
+    if (this.fabToggled) {
+      // Si fabToggled está activo, establece su valor en el estado anterior
+      this.fabToggled = this.previousFabToggled;
+    } else {
+      // Si fabToggled está inactivo, guarda su valor anterior y establece su valor en verdadero
+      this.previousFabToggled = this.fabToggled;
+      this.fabToggled = true;
+    }
   }
 
   async accion1() {

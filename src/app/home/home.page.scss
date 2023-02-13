@@ -10,28 +10,35 @@
   transform: translateY(-50%);
 }
 
-ion-fab::part(native){
-  border-radius: 20px !important;
-  width: 48px !important;
-  height: 48px !important;
+ion-fab-list{
+  // padding-left: 10px;
 }
 
-button[ion-fab] {
-  overflow: visible;
-  position: relative;
+.sos-bottom{
+  margin: 0;
+}
 
-  ion-label {
-      position: absolute;
-      top: -8px;
-      right: 40px;
+ion-fab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
 
-      color: white;
-      background-color: rgba(0,0,0,0.7);
-      line-height: 24px;
-      padding: 4px 8px;
-      border-radius: 4px;
-  }
-  contain: layout;
+ion-fab-button::part(native){
+  background: #e3e3e3;
+}
+
+ion-button ion-img {
+  display: block;
+  margin: 0 auto;
+  
+}
+
+ion-img::part(image){
+  padding-left: 9px;
+  width: 60%;
+  height: 60%;
 }
 
 
@@ -81,7 +88,7 @@ ion-menu-button{
 
 .side-menu-buttons{
   ion-button::part(native){
-    background-color: #ffffff;
+    background-color: #e3e3e3;
   }
 
   ion-button{
@@ -114,12 +121,13 @@ ion-menu-button{
     border-radius: 20px;
     width: 48px;
     height: 48px;
-    background-color: #fff;
+    background-color: #e3e3e3;
   }
 }
 
 .ayu {
 
+  margin-bottom: 90px !important;
   display: flex;
   justify-content: right;
   padding-right: 10px;
@@ -135,7 +143,7 @@ ion-menu-button{
     border-radius: 20px;
     width: 48px;
     height: 48px;
-    background-color: #fff;
+    background-color: #e3e3e3;
   }
 
 
@@ -184,7 +192,7 @@ ion-menu-button::part(icon){
     border-radius: 20px;
     width: 118px;
     height: 48px;
-    background-color: #ffffff;
+    background-color: #e3e3e3;
   }
 }
 
@@ -197,7 +205,7 @@ ion-menu-button::part(icon){
 
 
 ion-menu-button{
-  background: #ffffff;
+  background: #e3e3e3;
   border-radius: 20px;
 }
 

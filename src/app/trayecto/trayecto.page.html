@@ -29,8 +29,8 @@
   <ion-card>
     <div class="gencards">
   
-      <p class="blacktext"> <ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon> Cra 27 # 9 (UIS)</p>
-      <p class="blacktext"> <ion-icon class="aassd" name="location-outline" slot="end"></ion-icon> Parque de los niños</p>
+      <p class="blacktext"> <ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon> {{ dirorin }}</p>
+      <p class="blacktext"> <ion-icon class="aassd" name="location-outline" slot="end"></ion-icon> {{ dirdest }}</p>
     </div>
     
   </ion-card>
@@ -77,7 +77,9 @@
     Por favor ingrese un origen y destino.
   </div>
   
-  <ion-button expand="block" (click)="agregarPersona()">Agregar</ion-button>
+    <ion-button color="warning" expand="block" (click)="agregarPersona()">Agregar</ion-button>
+
+ 
 </ion-card>
 
 
@@ -85,7 +87,7 @@
 
 <ion-card (click)="abrirDialogo()" *ngFor="let persona of personas">
   <div class="gencards">
-    <ion-card-title>Trayecto {{ saver }}</ion-card-title>
+    <ion-card-title>Trayecto {{ persona.saver2 }}</ion-card-title>
     <p class="blacktext"><ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon>{{ persona.nombre }}</p>
     <p class="blacktext"><ion-icon class="aassd" name="location-outline" slot="end"></ion-icon>{{ persona.apellido }}</p>
   </div>

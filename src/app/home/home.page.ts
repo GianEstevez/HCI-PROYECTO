@@ -11,8 +11,7 @@ import { MenuController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
-
-
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -70,7 +69,8 @@ export class HomePage implements OnInit {
     private eventEmitterService: EventEmitterService,
     private menuController: MenuController,
     public toastController: ToastController,
-    private platform: Platform) {
+    private platform: Platform,
+    public alertController: AlertController) {
       
       //this.bgImage = this.backgroundService.getData();
 
@@ -87,6 +87,36 @@ export class HomePage implements OnInit {
 
     toggleFab() {
     this.showBackdrop = !this.showBackdrop;
+  }
+
+  async abrirSnack() {
+    const toast = await this.toastController.create({
+      message: 'Mensaje enviado',
+      duration: 2000, // La duración del Snackbar en milisegundos
+      position: 'bottom' // La posición en la que quieres mostrar el Snackbar
+    });
+    toast.present();
+  }
+
+  async abrirDialogo() {
+    const alert = await this.alertController.create({
+      header: '¿Enviar mensaje de ayuda?',
+      message: 'Se enviará un mensaje de texto a tu contacto de confianza con los datos de tu bus',
+      buttons: [{
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: data => {
+          
+        }
+      },
+      {
+        text: 'Aceptar',
+        handler: data => {
+          this.abrirSnack();
+        }
+      },]
+    });
+    await alert.present();
   }
 
   isFabOpened = false;
@@ -193,6 +223,10 @@ export class HomePage implements OnInit {
   
   toCall(){
     this.route.navigate(['/phonesos']);
+  }
+
+  toContact(){
+    this.route.navigate(['/contactsos']);
   }
 
   viewData() {

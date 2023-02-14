@@ -76,3 +76,21 @@ export class EventEmitterService {
   }
 
 }
+
+
+// EMITER TRAYECTOS
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EventEmitterService2 {
+
+  private emitChangeSource = new EventEmitter<any>();
+
+  changeEmitted$ = this.emitChangeSource.asObservable();
+
+  emitChange(change: any) {
+    this.emitChangeSource.emit(change);
+  }
+
+}

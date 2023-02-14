@@ -30,8 +30,6 @@
 
   </div>
 
-  
-
 
   
 
@@ -58,7 +56,13 @@
 
 
 
-  <div [hidden]="!showBackdrop" class="backdrop"></div>
+  <div [hidden]="!showBackdrop" class="backdrop">
+    <div class="asd2">
+      <p (click)="toCall()" class="botontext">Llamada telefónica</p>
+      <p class="botontext">Contacto de emergencia</p>
+      <p class="botontext">Compartir ubicación  </p>
+    </div>
+  </div>
   
   <ion-backdrop ></ion-backdrop>
 
@@ -69,10 +73,10 @@
       <ion-img src="../../assets/sos.png" width="50" height="50"></ion-img>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button>
+      <ion-fab-button (click)="abrirDialogo()">
         <ion-icon name="location"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button>
+      <ion-fab-button (click)="toContact()">
         <ion-icon name="person-circle-outline"></ion-icon>
       </ion-fab-button>
       <ion-fab-button (click)="toCall()">

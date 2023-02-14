@@ -16,7 +16,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 999;
 }
 
@@ -211,6 +211,12 @@ ion-menu-button::part(icon){
   margin-bottom: 10px;
 }
 
+.botontext{
+  color:white;
+  padding: 4px;
+  transition: all 0.2s;
+}
+
 
 .asd{
   display: flex;
@@ -230,7 +236,18 @@ ion-menu-button::part(icon){
   }
 }
 
-
+.asd2{
+  display: grid;
+  justify-content: right;
+  padding-right: 65px;
+  text-align: right;
+  padding-bottom: 130px;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
 
 .background-image {
   --background: #fff url("../../assets/bg.jpeg") no-repeat center center / cover;

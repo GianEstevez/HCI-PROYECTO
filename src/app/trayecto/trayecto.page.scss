@@ -11,6 +11,16 @@ ion-page{
     color:black;
 }
 
+ion-button{
+  color: white
+}
+
+ion-button::part(native){
+  color: #ffffff;
+}
+
+
+
 ion-toolbar::after {
     display: none;
   }
@@ -25,6 +35,7 @@ ion-toolbar::after {
 ion-card{
     margin-top: 20px;
     margin-left: 24px;
+    margin-bottom: 20px;
     margin-right: 24px;
     border-radius: 25px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;

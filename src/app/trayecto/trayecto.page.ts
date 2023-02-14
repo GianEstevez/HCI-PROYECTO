@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ModaltrayectoPage } from '../modaltrayecto/modaltrayecto.page';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { EventEmitterService2 } from '../app.module';
 
 
 
@@ -18,12 +19,15 @@ import { AlertController } from '@ionic/angular';
 })
 export class TrayectoPage implements OnInit {
 
-  personas: { nombre: string, apellido: string }[] = [];
+  personas: { nombre: string, apellido: string, saver2: number }[] = [];
   nombre: string = '';
   apellido: string = '';
   mostrarMensajeError: boolean = false;
   contper: number = 0;
   saver: number = 0;
+
+  dirorin: string = 'Cra 27 # 9 (UIS)';
+  dirdest: string = 'Parque de los niños';
   
 
   agregarPersona() {
@@ -32,7 +36,7 @@ export class TrayectoPage implements OnInit {
       this.mostrarMensajeError = true;
       return;
     }
-    this.personas.push({ nombre: this.nombre, apellido: this.apellido });
+    this.personas.push({ nombre: this.nombre, apellido: this.apellido, saver2: this.contper + 1 });
     this.nombre = '';
     this.apellido = '';
     this.mostrarMensajeError = false;
@@ -49,16 +53,18 @@ export class TrayectoPage implements OnInit {
   constructor(private fb: FormBuilder,
     private route: Router,
     private modalController: ModalController,
-    public alertController: AlertController) {
+    public alertController: AlertController,
+    private eventEmitterService: EventEmitterService2) {
     this.myForm = this.fb.group({
       inputs: this.fb.array([])
     });
   }
 
   async abrirDialogo() {
+    
     const alert = await this.alertController.create({
       header: '¿Seleccionar este trayecto?',
-      message: 'Este será su nuevo recorrido en la pantalla principal.',
+      message: 'Este será su nuevo recorrido en la pantalla principal',
       buttons: ['Cancelar','Aceptar']
     });
     await alert.present();

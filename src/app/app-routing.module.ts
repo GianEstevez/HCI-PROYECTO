@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'phonesos',
     loadChildren: () => import('./phonesos/phonesos.module').then( m => m.PhonesosPageModule)
   },
+  {
+    path: 'contactsos',
+    loadChildren: () => import('./contactsos/contactsos.module').then( m => m.ContactsosPageModule)
+  },
 ];
 
 @NgModule({

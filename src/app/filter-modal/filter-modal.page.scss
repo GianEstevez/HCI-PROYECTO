@@ -24,10 +24,6 @@ ion-accordion{
     margin-top: -17px;
   }
 
-  .title-bottom{
-    font-size: 20px !important;
-    margin-bottom: 0px;
-  }
   
   p{
     font-size: 15px;
@@ -82,10 +78,18 @@ ion-accordion{
     display: grid;
     justify-content: center;
     color:red($color: #000000);
-    margin-top: 20px;
+    margin-top: 0px;
     padding-left: 24px !important;
     padding-right: 24px !important;
+    padding-top: 35px;
   }
+
+  .title-bottom{
+    font-size: 30px !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
   
   .top-accordion{
     top: 60px;

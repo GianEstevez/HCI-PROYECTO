@@ -13,6 +13,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -82,7 +83,20 @@ export class HomePage implements OnInit {
 
     }
 
+    showBackdrop = false;
 
+    toggleFab() {
+    this.showBackdrop = !this.showBackdrop;
+  }
+
+  isFabOpened = false;
+
+  ionFabWillOpen() {
+    this.isFabOpened = true;
+  }
+
+  
+  
 
   
     ngAfterViewInit() {
@@ -128,26 +142,13 @@ export class HomePage implements OnInit {
   async presentModalFilter() {
     const modal = await this.modalCtrl.create({
       component: FilterModalPage,
-      breakpoints: [0, 0.5, 1],
+      breakpoints: [0, 0.5],
       initialBreakpoint: 0.5
     });
     await modal.present();
   }
   
-  fabToggled = false;
-
-  previousFabToggled = false;
-
-  toggleFab() {
-    if (this.fabToggled) {
-      // Si fabToggled está activo, establece su valor en el estado anterior
-      this.fabToggled = this.previousFabToggled;
-    } else {
-      // Si fabToggled está inactivo, guarda su valor anterior y establece su valor en verdadero
-      this.previousFabToggled = this.fabToggled;
-      this.fabToggled = true;
-    }
-  }
+  
 
   async accion1() {
     const toast = await this.toastController.create({
@@ -188,6 +189,10 @@ export class HomePage implements OnInit {
 
   trayecto(){
     this.route.navigate(['/trayecto']);
+  }
+  
+  toCall(){
+    this.route.navigate(['/phonesos']);
   }
 
   viewData() {

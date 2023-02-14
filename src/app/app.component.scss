@@ -23,3 +23,11 @@
     --ion-color-medium: #333;
     --ion-color-light: #fff;
   }
+
+  @font-face {
+    font-family: 'Sansopen';
+    src: url('../assets/fonts/sansopen.woff2') format('woff2');
+  }
+  *{
+    font-family: 'Sansopen', sans-serif;
+  }

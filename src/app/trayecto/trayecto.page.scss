@@ -1,7 +1,123 @@
+body {
+    font-family: 'Google Sans', sans-serif;
+  }
+  
+
 ion-page{
     justify-content: none;
 }
 
-app-proyecto{
-    background-color: blue;
+.color-black{
+    color:black;
 }
+
+ion-toolbar::after {
+    display: none;
+  }
+
+.aassd{
+    display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+
+ion-card{
+    margin-top: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 25px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+ion-button{
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.flex{
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.mover{
+    width: 100%;
+    padding-right: 20px;
+}
+
+.grid{
+    display: grid;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+
+ion-list{
+    padding-bottom: 0;
+}
+
+.blacktext{
+    color: black;
+}
+
+.topcards{
+    margin-top: 20px;
+}
+
+.gencards{
+    padding-left: 24px;
+}
+
+.center-accordion{
+    display: grid;
+    justify-content: center;
+    color:red($color: #000000);
+    margin-top: 20px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .title-bottom{
+    font-size: 30px !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .fontotray{
+    padding-bottom: 25px;
+  }
+
+  ion-card-title{
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .topepar{
+    padding-left: 24px;
+    padding-top: 20px;
+    font-size: 20px !important;
+  }
+
+  .title-bottom2{
+    font-size: 20px !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .center-topbar{
+
+    color:red($color: #000000);
+    
+  }
+
+  .boton-volver-topbar{
+    padding-left: 8px;
+  }
+
+  .faltan-cosas{
+    padding-left: 16px;
+    padding-top: 5px;
+  }

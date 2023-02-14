@@ -30,9 +30,24 @@
   padding-inline-end: 11px !important;
 }
 
+//ion-content,
+//ion-header,
+//ion-toolbar,
+//.ion-page,
+//.ion-header,
+//.ion-toolbar {
+//  font-family: 'Open Sans', sans-serif !important;
+//}
+
+
+
 //ion-modal{
 //  border-radius: 25px;
 //}
+
+.alert-wrapper.sc-ion-alert-md{
+  border-radius: 25px;
+}
 
 ion-menu.menu-content {
   --background: rgba(0, 0, 0, 0.5);
@@ -55,11 +70,20 @@ ion-modal::part(handle){
   top: 14px !important;
   width: 40px !important;
 }
+.ionicon, svg{
+  color: black;
+}
 
-ion-fab-button::part(native){
-  border-radius: 20px !important;
-  width: 48px !important;
-  height: 48px !important;
+ion-toolbar{
+  color: #1a2636;
+}
+
+svg {
+  fill: #FF0000; /* color que deseas aplicar */
+}
+
+.toolbar-background{
+  background-color: white !important;
 }
 
 .ion-bottom-sheet-handle {

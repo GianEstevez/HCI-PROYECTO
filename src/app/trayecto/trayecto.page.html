@@ -2,32 +2,97 @@
 
 <ion-content>
 
-  <ion-button (click)="home()" ><ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
-
-<ion-card>
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="nombre"></ion-input>
-  </ion-item>
   
-  <ion-item>
-    <ion-label position="floating">Edad</ion-label>
-    <ion-input type="number" [(ngModel)]="edad"></ion-input>
-  </ion-item>
+    
+      <ion-toolbar >
+        
+  
+        <ion-buttons slot="start">
+          <ion-button (click)="home()" class="boton-volver-topbar">
+            <ion-icon class="color-black" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        
+      </ion-toolbar>
+  
+ 
+  
+ 
+
+  <div class="center-accordion">
+
+    <p class="title-bottom">Mis trayectos </p>
+    <p class="fontotray"> Agrega o edita tus trayectos favoritos. También puedes agregar la cantidad de trayectos que desees. </p>
+    <p class="title-bottom2">Trayecto actual </p>
+  </div>
+  
+  <ion-card>
+    <div class="gencards">
+  
+      <p class="blacktext"> <ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon> Cra 27 # 9 (UIS)</p>
+      <p class="blacktext"> <ion-icon class="aassd" name="location-outline" slot="end"></ion-icon> Parque de los niños</p>
+    </div>
+    
+  </ion-card>
+
+  <div class="topepar">
+    <p>Agregar trayecto</p>  
+  </div>
+
+  
+<ion-card>
+
+  <div class="flex">
+
+    <div class="mover" >
+      <ion-list>
+        <ion-item>
+        
+          <ion-label position="floating">Origen</ion-label>
+          <ion-input [(ngModel)]="nombre"></ion-input>
+  
+        </ion-item>
+          
+          <ion-item>
+            <ion-label position="floating">Destino</ion-label>
+            <ion-input [(ngModel)]="apellido"></ion-input>
+            
+          </ion-item>
+      </ion-list>
+      
+      
+    </div>
+  
+    <div class="grid" >
+      <ion-icon name="ellipse-outline" slot="end"></ion-icon>
+      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      <ion-icon name="location-outline" slot="end"></ion-icon>
+    
+    </div>
+
+
+  </div>
+  
+  <div class="faltan-cosas" *ngIf="mostrarMensajeError" style="color: red;">
+    Por favor ingrese un origen y destino.
+  </div>
   
   <ion-button expand="block" (click)="agregarPersona()">Agregar</ion-button>
 </ion-card>
 
 
 
-<ion-card *ngFor="let persona of personas">
-  <ion-card-header>
-    <ion-card-title>{{ persona.nombre }}</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <p>Edad: {{ persona.edad }}</p>
-  </ion-card-content>
+
+<ion-card (click)="abrirDialogo()" *ngFor="let persona of personas">
+  <div class="gencards">
+    <ion-card-title>Trayecto {{ saver }}</ion-card-title>
+    <p class="blacktext"><ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon>{{ persona.nombre }}</p>
+    <p class="blacktext"><ion-icon class="aassd" name="location-outline" slot="end"></ion-icon>{{ persona.apellido }}</p>
+  </div>
+  
 </ion-card>
+
+<div></div>
 
 </ion-content>
 

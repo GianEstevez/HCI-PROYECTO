@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'trayecto',
     loadChildren: () => import('./trayecto/trayecto.module').then( m => m.TrayectoPageModule)
   },
+  {
+    path: 'modaltrayecto',
+    loadChildren: () => import('./modaltrayecto/modaltrayecto.module').then( m => m.ModaltrayectoPageModule)
+  },
+  {
+    path: 'phonesos',
+    loadChildren: () => import('./phonesos/phonesos.module').then( m => m.PhonesosPageModule)
+  },
 ];
 
 @NgModule({

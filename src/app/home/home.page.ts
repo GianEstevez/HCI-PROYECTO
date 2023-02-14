@@ -101,7 +101,7 @@ export class HomePage implements OnInit {
   async abrirDialogo() {
     const alert = await this.alertController.create({
       header: '¿Enviar mensaje de ayuda?',
-      message: 'Se enviará un mensaje de texto a tu contacto de confianza con los datos de tu bus',
+      message: 'Se enviará un mensaje de texto a tu contacto de confianza con la información de tu bus',
       buttons: [{
         text: 'Cancelar',
         role: 'cancel',

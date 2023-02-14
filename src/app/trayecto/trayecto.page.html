@@ -83,15 +83,12 @@
 </ion-card>
 
 
-
-
-<ion-card (click)="abrirDialogo()" *ngFor="let persona of personas">
-  <div class="gencards">
+<ion-card *ngFor="let persona of personas;let i = index">
+  <div (click)="abrirDialogo(i)" class="gencards">
     <ion-card-title>Trayecto {{ persona.saver2 }}</ion-card-title>
     <p class="blacktext"><ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon>{{ persona.nombre }}</p>
     <p class="blacktext"><ion-icon class="aassd" name="location-outline" slot="end"></ion-icon>{{ persona.apellido }}</p>
   </div>
-  
 </ion-card>
 
 <div></div>

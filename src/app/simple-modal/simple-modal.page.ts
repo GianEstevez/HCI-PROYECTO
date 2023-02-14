@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitterService2 } from '../app.module';
 
 @Component({
   selector: 'app-simple-modal',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleModalPage implements OnInit {
 
-  constructor() { }
+  valorDir = '';
+  valorOrig = '';
+
+  constructor(private eventEmitterService: EventEmitterService2) {
+    
+   }
 
   ngOnInit() {
+   
+    const auxiliar = this.eventEmitterService.getData();
+    this.valorDir = auxiliar?.dir;
+    this.valorOrig = auxiliar?.dir2;
+
+    console.log(auxiliar);
   }
 
 }

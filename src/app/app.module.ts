@@ -86,11 +86,53 @@ export class EventEmitterService {
 export class EventEmitterService2 {
 
   private emitChangeSource = new EventEmitter<any>();
+  private emitChangeSource2 = new EventEmitter<any>();
+
+  private data: any = {dir: 'Cra 27 # 9 (UIS)', dir2: 'Parque de los niños'};
 
   changeEmitted$ = this.emitChangeSource.asObservable();
 
   emitChange(change: any) {
     this.emitChangeSource.emit(change);
+    this.data = change;
+    console.log(change);
+
+  }
+
+  getData() {
+    return this.data;
+  }
+
+  setData(data: {}) {
+    this.data = data;
+  }
+
+}
+
+
+//
+
+// export interface changea{
+//   dir: any,
+//   dir2:
+// }
+
+
+//
+
+// EMITER TRAYECTOS
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EventEmitterService3 {
+
+  private emitChangeSource = new EventEmitter<any>();
+
+  changeEmitted$ = this.emitChangeSource.asObservable();
+
+  emitChange(change2: any) {
+    this.emitChangeSource.emit(change2);
   }
 
 }

@@ -17,7 +17,7 @@ ion-list{
 }
 
 .ion-item-space-bw-2 {
-  margin-top: -17px;
+  margin-top: -20px;
 }
 
 p{
@@ -42,6 +42,74 @@ ion-item::part(native){
   color:red($color: #000000);
 }
 
+.gencards{
+  padding-left: 24px;
+}
+
+.blacktext{
+  color: black;
+}
+
+ion-accordion{
+  //width: 99px;
+}
+
+ion-button::part(native){
+  
+  border-radius: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #95cc6b;
+}
+
+.third{
+  margin-top: 40px !important;
+}
+
+.obj0{
+  display: flex;
+}
+
+.obj1{
+  width: 100%;
+}
+
+ion-img::part(image){
+  width: 40px;
+}
+
+.obj2{
+
+  padding-right: 10px;
+  padding-top: 12px;
+
+}
+
+.tam-tex{
+  font-size: 15px;
+}
+
+.aassd{
+  display: inline-block;
+vertical-align: middle;
+padding-right: 10px;
+}
+
+.a{
+  display: grid;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+ion-card{
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+    border-radius: 25px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
 
 
 .top-accordion{
@@ -51,6 +119,18 @@ ion-item::part(native){
 
 ion-item{
   border-radius: 25px;
+}
+
+.padre{
+  display: flex;
+}
+
+.hijo1{
+
+}
+
+.barraalt{
+  height: 130px;
 }
 
 ion-padding{

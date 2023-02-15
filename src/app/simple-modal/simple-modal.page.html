@@ -2,32 +2,65 @@
 
 <ion-content overflow-scroll="true">
 
-  <p> {{ valorDir }} </p>
-  <p> {{ valorOrig }} </p>
+  
+  
+  <div class="a">
+    
+    <p class="tam-tex"> <b>Trayecto Actual</b> </p>
+    <ion-card>
+  <div class="obj0">
+    <div class="obj1">
+      <div class="gencards">
+        <p class="blacktext"> <ion-icon class="aassd" name="ellipse-outline" slot="end"></ion-icon> {{ valorDir }}</p>
+        <p class="blacktext"> <ion-icon class="aassd" name="location-outline" slot="end"></ion-icon> {{ valorOrig }}</p>
+      </div>
+    </div>
+    
+    <div class="obj2">
+    <ion-button (click)="irtray()" ><ion-icon name="sync-outline"></ion-icon></ion-button>
+    </div>
+  </div>
+  </ion-card>
 
-
-<div class="center-accordion">
   <ion-accordion-group>
-    <ion-accordion value="first">
+    <ion-accordion  value="first">
       <ion-item slot="header" color="light">
-        <ion-label><b>P8</b> </ion-label>
+        <ion-label> <ion-img src="../../assets/p8.svg"></ion-img> </ion-label>
       </ion-item>
+      
       <div class="ion-padding" slot="content">
+        <div class="padre">
+
+          <div class="hijo1">
+            <ion-img  class="barraalt" src="../../assets/barra.svg"></ion-img>
+          </div>
+
+          <div class="hijo2">
+        
         <ion-list>
-          <ion-item class="ion-item-space-bw">
-            <ion-label> <p class="accordion-yellow-text"> <b>Tiempo de viaje: 18 minutos</b></p> </ion-label>
-          </ion-item>
+         
           <ion-item class="ion-item-space-bw-2">
-            <ion-label> <p class="item-color-p"> <b> Camina 700m hasta </b> </p> </ion-label>
+            <ion-label> <p class="item-color-p"> <b> <ion-icon name="walk"></ion-icon> Camina 700m hasta </b> </p> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
             <ion-label> <b>Parque estación UIS</b> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
+            <ion-label> <p class="accordion-yellow-text"> <b> <ion-icon name="chevron-down"></ion-icon> Ver todas las paradas</b></p> </ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
             <ion-label> <b> Est. Torres de Monterrey</b></ion-label>
           </ion-item>
         </ion-list>
+
       </div>
+
+    </div>
+
+
+    </div>
+
+
     </ion-accordion>
   </ion-accordion-group>
 
@@ -36,7 +69,7 @@
   <ion-accordion-group>
     <ion-accordion value="second" class="top-accordion">
       <ion-item slot="header" color="light">
-        <ion-label> <b>P10</b> </ion-label>
+        <ion-label> <ion-img src="../../assets/p6.svg"></ion-img> </ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list>
@@ -59,6 +92,45 @@
       </div>
     </ion-accordion>
   </ion-accordion-group>
+
+  <ion-accordion-group>
+    <ion-accordion value="third" class="third">
+      <ion-item slot="header" color="light">
+        <ion-label> <ion-img src="../../assets/p13.svg"></ion-img> </ion-label>
+      </ion-item>
+
+  
+      <div class="ion-padding" slot="content">
+        
+        <ion-list>
+          <ion-item class="ion-item-space-bw">
+            
+            <ion-label>Tienda de viaje: 18 minutos</ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label>Mega Man X</ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label>The Legend of Zelda</ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label>Pac-Man</ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label>Super Mario World</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+
+    </ion-accordion>
+  </ion-accordion-group>
+
+</div>
+  
+
+
+<div class="center-accordion">
+  
 
 </div>
 

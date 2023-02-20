@@ -128,11 +128,21 @@ export class EventEmitterService2 {
 export class EventEmitterService3 {
 
   private emitChangeSource = new EventEmitter<any>();
+  private emitChangeSourceBottom = new EventEmitter<any>();
+
 
   changeEmitted$ = this.emitChangeSource.asObservable();
+  changeEmittedBottom$ = this.emitChangeSourceBottom.asObservable();
+
 
   emitChange(change2: any) {
     this.emitChangeSource.emit(change2);
+
+  }
+
+  emitChangeBottom(change2: any) {
+    this.emitChangeSourceBottom.emit(change2);
+
   }
 
 }

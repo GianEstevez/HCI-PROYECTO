@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'contactsos',
     loadChildren: () => import('./contactsos/contactsos.module').then( m => m.ContactsosPageModule)
   },
+  {
+    path: 'sidecontact',
+    loadChildren: () => import('./sidecontact/sidecontact.module').then( m => m.SidecontactPageModule)
+  },
 ];
 
 @NgModule({

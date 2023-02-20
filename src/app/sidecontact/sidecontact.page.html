@@ -1,0 +1,92 @@
+
+
+<ion-content>
+
+  
+    
+  <ion-toolbar >
+    
+
+    <ion-buttons slot="start">
+      <ion-button (click)="home()" class="boton-volver-topbar">
+        <ion-icon class="color-black" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+
+
+
+
+
+<div class="center-accordion">
+
+<p class="title-bottom">Mis contactos </p>
+<p class="fontotray"> Agrega o edita tus contactos de emergencia.</p>
+<p class="title-bottom2">Contacto de emergencia actual </p>
+</div>
+
+<ion-card>
+<div class="gencards">
+  <p class="blacktext"> <ion-icon class="aassd" name="person-circle-outline" slot="end"></ion-icon> Tía María </p>
+  <p class="blacktext"> <ion-icon class="aassd" name="phone-portrait-outline" slot="end"></ion-icon> 300666321</p>
+</div>
+
+</ion-card>
+
+<div class="topepar">
+<p>Agregar contacto</p>  
+</div>
+
+
+<ion-card>
+
+<div class="flex">
+
+<div class="mover" >
+  <ion-list>
+    <ion-item>
+    
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+
+    </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Numero</ion-label>
+        <ion-input type="number" [(ngModel)]="apellido"></ion-input>
+        
+      </ion-item>
+  </ion-list>
+  
+  
+</div>
+
+
+
+
+</div>
+
+<div class="faltan-cosas" *ngIf="mostrarMensajeError" style="color: red;">
+Por favor ingrese un origen y destino.
+</div>
+
+<ion-button color="warning" expand="block" (click)="agregarPersona()">Agregar</ion-button>
+
+
+</ion-card>
+
+
+<ion-card *ngFor="let persona of personas;let i = index">
+<div (click)="abrirDialogo(i)" class="gencards">
+<ion-card-title>Contacto {{ persona.saver2 }}</ion-card-title>
+<p class="blacktext"><ion-icon class="aassd" name="person-circle-outline" slot="end"></ion-icon>{{ persona.nombre }}</p>
+<p class="blacktext"><ion-icon class="aassd" name="phone-portrait-outline" slot="end"></ion-icon>{{ persona.apellido }}</p>
+</div>
+</ion-card>
+
+<div></div>
+
+</ion-content>
+
+

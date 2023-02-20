@@ -3,7 +3,7 @@ import { SimpleModalPage } from '../simple-modal/simple-modal.page';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilterModalPage } from '../filter-modal/filter-modal.page';
-import { DataService, BackgroundService } from '../app.module';
+import { DataService, BackgroundService, EventEmitterService3 } from '../app.module';
 import { EventEmitterService } from '../app.module';
 import { IonMenu } from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
@@ -11,7 +11,7 @@ import { MenuController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
-import { AlertController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular'
 
 @Component({
   selector: 'app-home',
@@ -70,7 +70,8 @@ export class HomePage implements OnInit {
     private menuController: MenuController,
     public toastController: ToastController,
     private platform: Platform,
-    public alertController: AlertController) {
+    public alertController: AlertController,
+    private eventEmitterServiceBottom: EventEmitterService3) {
       
       //this.bgImage = this.backgroundService.getData();
 
@@ -80,7 +81,17 @@ export class HomePage implements OnInit {
           this.bgImage = change;
         }
       );
-
+        
+      this.eventEmitterServiceBottom.changeEmittedBottom$.subscribe(
+        change => {
+          
+          if (!change) {
+            this.modalCtrl.dismiss();
+            
+          }
+        }
+      )
+      
     }
 
     showBackdrop = false;
@@ -164,9 +175,16 @@ export class HomePage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: SimpleModalPage,
       breakpoints: [0, 0.5, 1],
-      initialBreakpoint: 0.5
+      initialBreakpoint: 1
     });
+
     await modal.present();
+
+    
+  }
+
+  prueba(){
+    this.modalCtrl.dismiss();
   }
 
   async presentModalFilter() {
@@ -227,6 +245,10 @@ export class HomePage implements OnInit {
 
   toContact(){
     this.route.navigate(['/contactsos']);
+  }
+
+  sideContact(){
+    this.route.navigate(['/sidecontact']);
   }
 
   viewData() {

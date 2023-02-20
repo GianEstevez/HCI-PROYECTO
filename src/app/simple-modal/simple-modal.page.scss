@@ -1,15 +1,19 @@
 ion-accordion{
-  top: 40px;
-
+  
   border-radius: 25px;
   background: #88B0DB;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  width: 300px;
+  width: 100%
 }
 
 ion-list{
   background: #88B0DB;
+}
+
+
+.iconslabel{
+  display: flex !important;
 }
 
 .ion-item-space-bw {
@@ -20,12 +24,46 @@ ion-list{
   margin-top: -20px;
 }
 
+.pad{
+  display: flex;
+  flex-direction: row;
+  ion-icon{
+    color: #F6FFBD ;
+  }
+}
+
+ion-icon{
+  padding-top: 5px !important;
+}
+
+ion-inner{
+  padding-top:5px !important;
+}
+
+svg{
+  padding-top: 3px !important;
+}
+
+.image-left{
+  padding-left: 3px !important;
+}
+
+ion-img::part(image){
+  padding-left: 2px !important;
+}
+
+.xdsad{
+  padding-top: 3px;
+}
+
+
 p{
   font-size: 15px;
 }
 
 .accordion-yellow-text{
   color: #F6FFBD;
+  padding-left: 5px;
 }
 
 .item-color-p{
@@ -35,6 +73,7 @@ p{
 ion-item::part(native){
   background-color: #88B0DB;
 }
+
 
 .center-accordion{
   display: grid;
@@ -63,7 +102,7 @@ ion-button::part(native){
 }
 
 .third{
-  margin-top: 40px !important;
+  margin-top: 20px !important;
 }
 
 .obj0{
@@ -85,8 +124,21 @@ ion-img::part(image){
 
 }
 
+.bottoma{
+  padding-bottom: 70px;
+}
+
 .tam-tex{
   font-size: 15px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+
+.tam-tex2{
+  font-size: 15px;
+  padding-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
 
 .aassd{
@@ -97,7 +149,8 @@ padding-right: 10px;
 
 .a{
   display: grid;
-  justify-content: center;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 40px;
 }
 

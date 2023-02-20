@@ -6,7 +6,7 @@
   
   <div class="a">
     
-    <p class="tam-tex"> <b>Trayecto Actual</b> </p>
+    <p class="tam-tex2"> <b>Trayecto Actual</b> </p>
     <ion-card>
   <div class="obj0">
     <div class="obj1">
@@ -22,10 +22,14 @@
   </div>
   </ion-card>
 
+  <p class="tam-tex2"> <b>Ruta Actual</b> </p>
+
   <ion-accordion-group>
     <ion-accordion  value="first">
       <ion-item slot="header" color="light">
-        <ion-label> <ion-img src="../../assets/p8.svg"></ion-img> </ion-label>
+        <div class="iconslabel">
+        <ion-label class="iconslabel"> <ion-icon class="xdsad" name="walk-outline"></ion-icon> <ion-icon name="chevron-forward-outline"></ion-icon> <ion-img class="image-left" src="../../assets/p8.svg"></ion-img> </ion-label>
+      </div>
       </ion-item>
       
       <div class="ion-padding" slot="content">
@@ -40,90 +44,106 @@
         <ion-list>
          
           <ion-item class="ion-item-space-bw-2">
-            <ion-label> <p class="item-color-p"> <b> <ion-icon name="walk"></ion-icon> Camina 700m hasta </b> </p> </ion-label>
+            <ion-label> <p class="item-color-p"> <b> <ion-icon name="walk"></ion-icon> Camina 70m hasta </b> </p> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label> <b>Parque estación UIS</b> </ion-label>
+            <ion-label> <b>Parque Estación UIS</b> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label> <p class="accordion-yellow-text"> <b> <ion-icon name="chevron-down"></ion-icon> Ver todas las paradas</b></p> </ion-label>
+            <ion-label class="pad">  <ion-icon name="chevron-down"></ion-icon>  <p class="accordion-yellow-text"> <b> Ver todas las paradas</b></p> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label> <b> Est. Torres de Monterrey</b></ion-label>
+            <ion-label> <b> Est. La Flora</b></ion-label>
           </ion-item>
         </ion-list>
 
       </div>
-
     </div>
-
-
     </div>
-
-
     </ion-accordion>
   </ion-accordion-group>
 
-
-
-  <ion-accordion-group>
-    <ion-accordion value="second" class="top-accordion">
-      <ion-item slot="header" color="light">
-        <ion-label> <ion-img src="../../assets/p6.svg"></ion-img> </ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        <ion-list>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>Tienda de viaje: 18 minutos</ion-label>
-          </ion-item>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>Mega Man X</ion-label>
-          </ion-item>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>The Legend of Zelda</ion-label>
-          </ion-item>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>Pac-Man</ion-label>
-          </ion-item>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>Super Mario World</ion-label>
-          </ion-item>
-        </ion-list>
-      </div>
-    </ion-accordion>
-  </ion-accordion-group>
+  <p class="tam-tex"> <b>Rutas Alternas</b> </p>
 
   <ion-accordion-group>
-    <ion-accordion value="third" class="third">
+    <ion-accordion  value="first" class="third">
       <ion-item slot="header" color="light">
-        <ion-label> <ion-img src="../../assets/p13.svg"></ion-img> </ion-label>
+        <ion-label class="iconslabel"> <ion-icon name="walk-outline"></ion-icon> <ion-icon name="chevron-forward-outline"></ion-icon> <ion-img class="image-left" src="../../assets/p6.svg"></ion-img> </ion-label>
       </ion-item>
-
-  
+      
       <div class="ion-padding" slot="content">
+        <div class="padre">
+
+          <div class="hijo1">
+            <ion-img  class="barraalt" src="../../assets/barra.svg"></ion-img>
+          </div>
+
+          <div class="hijo2">
         
         <ion-list>
-          <ion-item class="ion-item-space-bw">
-            
-            <ion-label>Tienda de viaje: 18 minutos</ion-label>
+         
+          <ion-item class="ion-item-space-bw-2">
+            <ion-label> <p class="item-color-p"> <b> <ion-icon name="walk"></ion-icon> Camina 100m hasta </b> </p> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label>Mega Man X</ion-label>
+            <ion-label> <b>Estación Clarín</b> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label>The Legend of Zelda</ion-label>
+            <ion-label class="pad">  <ion-icon name="chevron-down"></ion-icon>  <p class="accordion-yellow-text"> <b> Ver todas las paradas</b></p> </ion-label>
           </ion-item>
           <ion-item class="ion-item-space-bw">
-            <ion-label>Pac-Man</ion-label>
-          </ion-item>
-          <ion-item class="ion-item-space-bw">
-            <ion-label>Super Mario World</ion-label>
+            <ion-label> <b> Est. Oasis</b></ion-label>
           </ion-item>
         </ion-list>
-      </div>
 
+      </div>
+    </div>
+    </div>
     </ion-accordion>
   </ion-accordion-group>
+
+
+
+  <ion-accordion-group>
+    <ion-accordion  value="first" class="third">
+      <ion-item slot="header" color="light">
+        <ion-label class="iconslabel"> <ion-icon name="walk-outline"></ion-icon> <ion-icon name="chevron-forward-outline"></ion-icon> <ion-img class="image-left" src="../../assets/p13.svg"></ion-img> </ion-label>
+      </ion-item>
+      
+      <div class="ion-padding" slot="content">
+        <div class="padre">
+
+          <div class="hijo1">
+            <ion-img  class="barraalt" src="../../assets/barra.svg"></ion-img>
+          </div>
+
+          <div class="hijo2">
+        
+        <ion-list>
+         
+          <ion-item class="ion-item-space-bw-2">
+            <ion-label> <p class="item-color-p"> <b> <ion-icon name="walk"></ion-icon> Camina 120m hasta </b> </p> </ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label> <b>Est. Parque Café</b> </ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label class="pad">  <ion-icon name="chevron-down"></ion-icon>  <p class="accordion-yellow-text"> <b> Ver todas las paradas</b></p> </ion-label>
+          </ion-item>
+          <ion-item class="ion-item-space-bw">
+            <ion-label> <b> Est. Edificio Flor</b></ion-label>
+          </ion-item>
+        </ion-list>
+
+      </div>
+    </div>
+    </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+
+  <div class="bottoma"></div>
+
 
 </div>
   

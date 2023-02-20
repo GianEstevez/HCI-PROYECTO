@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +18,7 @@ import { EventEmitterService3 } from '../app.module';
   templateUrl: './trayecto.page.html',
   styleUrls: ['./trayecto.page.scss'],
 })
-export class TrayectoPage implements OnInit {
+export class TrayectoPage implements OnInit, OnDestroy {
 
   personas: { nombre: string, apellido: string, saver2: number }[] = [];
   personas2: { dir: any, dir2: any }[] = [];
@@ -58,6 +58,10 @@ export class TrayectoPage implements OnInit {
     this.dirdest = auxiliar.dir2;
   }
 
+  ngOnDestroy(): void {
+    
+  }
+
 
   myForm: FormGroup;
 
@@ -78,6 +82,8 @@ export class TrayectoPage implements OnInit {
         console.log(this.dirorin);
       }
     );
+    
+
 
 
 
